@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musafili Justine - My Personal Website</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>Musafili Justine</h1>
+        <p>Student ID: 202508384</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#hobbies">My Hobbies</a>
+        <a href="#learning">My Learning Plan</a>
+        <a href="#photos">My Photos</a>
+        <a href="#media">My Media</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>
+                My name is Musafili Justine and I am a second-year student in the ICT programme.
+                I am passionate about technology and I am currently learning how to build
+                websites using HTML and CSS. I enjoy solving problems, working with
+                computers, and exploring how the internet works behind the scenes. My goal
+                is to become a confident web developer who can create useful, attractive,
+                and accessible websites for real people. In my free time I like studying,
+                watching football, and playing games.
+            </p>
+        </section>
+
+        <!-- HOBBIES SECTION -->
+        <section id="hobbies" class="content-section">
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Studying and reading tech blogs</li>
+                <li>Watching football</li>
+                <li>Playing games</li>
+            </ul>
+        </section>
+
+        <!-- LEARNING PLAN SECTION -->
+        <section id="learning" class="content-section">
+            <h2>My Learning Plan</h2>
+            <ol>
+                <li>Practise HTML and CSS for at least 30 minutes every day.</li>
+                <li>Build one small project each week (a page, form, or gallery).</li>
+                <li>Read MDN Web Docs to deepen my understanding of each tag.</li>
+            </ol>
+
+            <table>
+                <caption>My Weekly Web Learning Plan</caption>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Topic</th>
+                        <th>Practice Task</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Monday</td><td>HTML structure</td><td>Build a simple page</td></tr>
+                    <tr><td>Wednesday</td><td>CSS styling</td><td>Style a section</td></tr>
+                    <tr><td>Friday</td><td>Layout &amp; media</td><td>Add images and video</td></tr>
+                </tbody>
+            </table>
+
+            <p>
+                Useful resource:
+                <a href="https://developer.mozilla.org/en-US/docs/Learn" target="_blank">
+                    MDN Web Docs — Learn Web Development
+                </a>
+            </p>
+        </section>
+
+        <!-- PHOTOS SECTION -->
+        <section id="photos" class="content-section">
+            <h2>My Photos</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/photo1.jpg" alt="Musafili Justine sitting in a bright green Barcelona football jersey and khaki pants">
+                    <figcaption>Relaxing in my FC Barcelona jersey — I love watching football!</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo2.jpg" alt="Musafili Justine standing in a blue checked shirt, black trousers, and a watch">
+                    <figcaption>A casual look wearing my blue checked shirt.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/photo3.jpg" alt="Musafili Justine wearing a formal black suit jacket, tie, and blue trousers">
+                    <figcaption>Dressed formally for a special occasion.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- MEDIA SECTION -->
+        <section id="media" class="content-section">
+            <h2>My Media</h2>
+
+            <h3>Self-Introduction Video</h3>
+            <video controls>
+                <source src="videos/intro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p>
+                <strong>Video summary:</strong> In this short clip I introduce myself,
+                state my programme (ICT), and explain one web skill I hope to learn — 
+                responsive web design using CSS.
+            </p>
+
+            <h3>Audio: My Hobby</h3>
+            <audio controls>
+                <source src="videos/voice.m4a" type="audio/mp4">
+                Your browser does not support the audio tag.
+            </audio>
+            <p>
+                In this recording I describe one of my hobbies and why I enjoy it.
+            </p>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="content-section">
+            <h2>Contact Me</h2>
+            <p><em>Note: This form does not send data — it is only a demonstration.</em></p>
+
+            <form action="#">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="topic">Topic:</label>
+                <select id="topic" name="topic">
+                    <option>General enquiry</option>
+                    <option>Feedback on my site</option>
+                    <option>Collaboration</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Musafili Justine. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
