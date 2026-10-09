@@ -217,3 +217,128 @@ img {
     height: auto;
     border-radius: 4px;
 }
+/* ===== NEW STYLES FOR ACTIVITY 3 ===== */
+
+/* Style for the View My Projects button */
+.btn {
+    display: inline-block;
+    background-color: #2e6ea6;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #1f4e79;
+}
+
+/* Style for the Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background-color: #f9fbfd;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #1f4e79;
+}
+/* ===== ACTIVITY 3: DARK THEME ===== */
+.theme-btn {
+    background-color: #ffd966;
+    color: #1f4e79;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.dark-theme {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+.dark-theme .content-section {
+    background-color: #16213e;
+    border-color: #0f3460;
+}
+
+.dark-theme h2, .dark-theme h3 {
+    color: #ffd966;
+}
+
+.dark-theme nav {
+    background-color: #0f3460;
+}
+
+.dark-theme .project-card {
+    background-color: #1a1a2e;
+    border-color: #0f3460;
+}
+
+.dark-theme input, .dark-theme select, .dark-theme textarea {
+    background-color: #0f3460;
+    color: #e0e0e0;
+    border-color: #1a1a2e;
+}
+
+/* ===== ACTIVITY 3: PROJECT DETAILS & CALCULATOR ===== */
+.read-more-btn {
+    background-color: #2e6ea6;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.project-details {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: inherit;
+    border-top: 1px dashed #d1d9e0;
+    padding-top: 0.5rem;
+}
+
+.calculator {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    background-color: #f9fbfd;
+}
+
+.dark-theme .calculator {
+    background-color: #1a1a2e;
+    border-color: #0f3460;
+}
+
+.calculator input {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    width: 80px;
+}
+
+.calculator button {
+    background-color: #1f4e79;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}

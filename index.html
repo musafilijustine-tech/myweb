@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Musafili Justine - My Personal Website</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -16,22 +17,37 @@
 
     <!-- NAVIGATION -->
     <nav>
+        <a href="#intro">Home</a>
         <a href="#about">About Me</a>
         <a href="#hobbies">My Hobbies</a>
         <a href="#learning">My Learning Plan</a>
+        <a href="#projects">My Projects</a>
         <a href="#photos">My Photos</a>
         <a href="#media">My Media</a>
         <a href="#contact">Contact</a>
+        <button id="themeToggle" class="theme-btn">Dark Mode</button>
     </nav>
 
     <!-- MAIN CONTENT -->
     <main>
 
+        <!-- INTRO SECTION (NEW) -->
+        <section id="intro" class="content-section">
+            <h2>Welcome</h2>
+            <p>
+                Hello! I am <strong>Musafili Justine</strong>, a student in the ICT programme. 
+                I am passionate about technology and I am currently learning how to build websites using HTML and CSS. 
+                This portfolio showcases my skills and projects.
+            </p>
+            <!-- This button will link to your Projects section -->
+            <a href="#projects" class="btn">View My Projects</a>
+        </section>
+
         <!-- ABOUT ME SECTION -->
         <section id="about" class="content-section">
             <h2>About Me</h2>
             <p>
-                My name is Musafili Justine and I am a second-year student in the ICT programme.
+                My name is Musafili Justine and I am a first-year student in the ICT programme.
                 I am passionate about technology and I am currently learning how to build
                 websites using HTML and CSS. I enjoy solving problems, working with
                 computers, and exploring how the internet works behind the scenes. My goal
@@ -82,7 +98,46 @@
                     MDN Web Docs — Learn Web Development
                 </a>
             </p>
+            <!-- Study Hours Calculator -->
+<div class="calculator">
+    <h3>Study Hours Calculator</h3>
+    <p>Plan how much time you will spend learning web technologies each week.</p>
+    
+    <label for="hoursPerDay">Hours per day:</label>
+    <input type="number" id="hoursPerDay" placeholder="e.g. 2">
+    
+    <label for="daysPerWeek">Days per week (1-7):</label>
+    <input type="number" id="daysPerWeek" placeholder="e.g. 5">
+    
+    <button id="calcBtn">Calculate Total</button>
+    <p id="calcResult"></p>
+</div>
         </section>
+
+        <!-- PROJECTS SECTION -->
+<section id="projects" class="content-section">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Project 1: Personal Portfolio</h3>
+            <p>I built this personal website using HTML5 semantic tags, CSS styling, and media elements.</p>
+            <button class="read-more-btn" onclick="toggleDetails('details1')">Read More</button>
+            <p id="details1" class="project-details" style="display: none;">This project taught me how to structure a full webpage, link external stylesheets, and organise folders for images and videos.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2: Contact Form</h3>
+            <p>I created a contact form with labelled fields, input validation, and responsive layout.</p>
+            <button class="read-more-btn" onclick="toggleDetails('details2')">Read More</button>
+            <p id="details2" class="project-details" style="display: none;">I learned how to use the form tag, labels, inputs, textareas, and HTML5 validation attributes to collect user data safely.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 3: Media Gallery</h3>
+            <p>I implemented a photo gallery and embedded video/audio players with custom controls.</p>
+            <button class="read-more-btn" onclick="toggleDetails('details3')">Read More</button>
+            <p id="details3" class="project-details" style="display: none;">This helped me understand how to embed multimedia files using video and audio tags, and how to style them using CSS.</p>
+        </div>
+    </div>
+</section>
 
         <!-- PHOTOS SECTION -->
         <section id="photos" class="content-section">
@@ -118,22 +173,21 @@
                 responsive web design using CSS.
             </p>
 
-            <h3>Audio: My Hobby</h3>
-            <audio controls>
-                <source src="videos/voice.m4a" type="audio/mp4">
-                Your browser does not support the audio tag.
-            </audio>
-            <p>
-                In this recording I describe one of my hobbies and why I enjoy it.
-            </p>
-        </section>
+           <h3>Audio: My Hobby</h3>
+
+<p>In this recording I describe one of my hobbies and why I enjoy it.</p>
+
+<audio controls preload="metadata" style="display: block; width: 100%; min-height: 40px;">
+    <source src="./videos/voice.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 
         <!-- CONTACT SECTION -->
         <section id="contact" class="content-section">
             <h2>Contact Me</h2>
             <p><em>Note: This form does not send data — it is only a demonstration.</em></p>
 
-            <form action="#">
+            <form id="contactForm" action="#">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -152,6 +206,7 @@
 
                 <button type="submit">Send Message</button>
             </form>
+            <div id="formFeedback"></div>
         </section>
 
     </main>
@@ -159,6 +214,7 @@
     <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Musafili Justine. All rights reserved.</p>
+        <p><a href="https://github.com/musafiliJustine-tech/myweb" target="_blank">View Source on GitHub</a></p>
     </footer>
 
 </body>
