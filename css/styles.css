@@ -3,14 +3,25 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #222;
-    background-color: #f4f7f6;
     margin: 0;
     padding: 0;
+
+    /* BACKGROUND PHOTO */
+    background-image: url('../images/photo1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+main {
+    background-color: transparent;
+    padding-bottom: 1rem;
 }
 
 /* ===== HEADER ===== */
 header {
-    background-color: #1f4e79;
+    background-color: rgba(31, 78, 121, 0.95);
     color: #ffffff;
     padding: 1.5rem 1rem;
     text-align: center;
@@ -30,7 +41,7 @@ header p {
 
 /* ===== NAVIGATION ===== */
 nav {
-    background-color: #2e6ea6;
+    background-color: rgba(46, 110, 166, 0.95);
     text-align: center;
     padding: 1rem;
     position: sticky;
@@ -52,20 +63,25 @@ nav a:focus {
     text-decoration: underline;
 }
 
-/* ===== MAIN CONTENT SECTIONS ===== */
+/* ===== MAIN CONTENT SECTIONS (FLOATING BOXES) ===== */
 .content-section {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.92);
     padding: 1.5rem;
     margin: 1.5rem auto;
-    max-width: 900px;
+    max-width: 800px;
     border: 1px solid #d1d9e0;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* Unique ID selector as required */
 #hobbies {
-    background-color: #f1f6fa;
+    background-color: rgba(241, 246, 250, 0.92);
+}
+
+/* ===== BOLD NAME STYLE ===== */
+.bold-name {
+    font-weight: bold;
+    color: #000000;
 }
 
 /* Headings */
@@ -98,10 +114,13 @@ table {
     margin-bottom: 1rem;
 }
 
+/* Caption shifted to start at the middle of the "Day" column */
 caption {
     font-weight: bold;
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
+    text-align: left;
+    padding-left: 15%;
 }
 
 th, td {
@@ -176,6 +195,7 @@ input, select, textarea {
     font-size: 1rem;
     width: 100%;
     box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 input:focus, select:focus, textarea:focus {
@@ -206,55 +226,27 @@ button:focus {
 footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: #1f4e79;
+    background-color: rgba(31, 78, 121, 0.95);
     color: #ffffff;
     margin-top: 2rem;
 }
 
-/* ===== GLOBAL MEDIA RULE (Required by rubric) ===== */
+footer a {
+    color: #ffd966;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== GLOBAL MEDIA RULE ===== */
 img {
     max-width: 100%;
     height: auto;
     border-radius: 4px;
 }
-/* ===== NEW STYLES FOR ACTIVITY 3 ===== */
 
-/* Style for the View My Projects button */
-.btn {
-    display: inline-block;
-    background-color: #2e6ea6;
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    margin-top: 1rem;
-    transition: background-color 0.2s;
-}
-
-.btn:hover, .btn:focus {
-    background-color: #1f4e79;
-}
-
-/* Style for the Projects Grid */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.project-card {
-    background-color: #f9fbfd;
-    border: 1px solid #d1d9e0;
-    border-radius: 6px;
-    padding: 1rem;
-}
-
-.project-card h3 {
-    margin-top: 0;
-    color: #1f4e79;
-}
 /* ===== ACTIVITY 3: DARK THEME ===== */
 .theme-btn {
     background-color: #ffd966;
@@ -272,8 +264,12 @@ img {
     color: #e0e0e0;
 }
 
+.dark-theme main {
+    background-color: transparent;
+}
+
 .dark-theme .content-section {
-    background-color: #16213e;
+    background-color: rgba(22, 33, 62, 0.95);
     border-color: #0f3460;
 }
 
@@ -286,7 +282,7 @@ img {
 }
 
 .dark-theme .project-card {
-    background-color: #1a1a2e;
+    background-color: rgba(26, 26, 46, 0.95);
     border-color: #0f3460;
 }
 
@@ -320,11 +316,11 @@ img {
     padding: 1rem;
     border: 1px solid #d1d9e0;
     border-radius: 6px;
-    background-color: #f9fbfd;
+    background-color: rgba(249, 251, 253, 0.95);
 }
 
 .dark-theme .calculator {
-    background-color: #1a1a2e;
+    background-color: rgba(26, 26, 46, 0.95);
     border-color: #0f3460;
 }
 
@@ -341,4 +337,63 @@ img {
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
+}
+
+/* ===== ACTIVITY 3: NEW BUTTON AND PROJECT GRID ===== */
+.btn {
+    display: inline-block;
+    background-color: #2e6ea6;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #1f4e79;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background-color: rgba(249, 251, 253, 0.95);
+    border: 1px solid #d1d9e0;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #1f4e79;
+}
+
+/* ===== RESPONSIVE MEDIA QUERY ===== */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    .theme-btn {
+        margin: 0.5rem 0;
+    }
+    body {
+        background-attachment: scroll;
+    }
+    .content-section {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    /* On mobile, put caption back in the center */
+    caption {
+        text-align: center;
+        padding-left: 0;
+    }
 }
